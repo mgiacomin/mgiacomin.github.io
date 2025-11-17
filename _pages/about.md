@@ -29,7 +29,10 @@ One of the most significant international research collaborations in fusion is t
 
 ## Plasma Turbulence
 
+<img src='/images/500x300.png'>
+
 Turbulence is one of Nature's most fascinating phenomena, ubiquitous in our daily lives. From stirring your teacup to riding your bike to work, you constantly interact with turbulence. This complex phenomenon arises from nonlinear processes and is often accompanied by chaos, making its dynamics exceptionally challenging to understand. Consider the stock market as an example of turbulence in a different context. A single news article can trigger unpredictable effects, causing some investors to gain fortunes while others suffer significant losses. As a matter of fact, the risks and opportunities in the stock market are largely associated with chaos and unpredictability.
 
 Turbulence in a fusion plasma transports particles and heat from the plasma core to the boundary region, effectively determining how good the plasma confinement is. Large turbulent transport results in poor plasma confinement and, therefore, low fusion performance. Can we predict turbulent transport in magnetic confinement fusion machines? The answer is yes, but it is not a simple task. It requires performing highly complex turbulence simulations that demand the computational power of the world's largest high-performance computing facilities. 
 
+Find out more on my research activity [here]()!
