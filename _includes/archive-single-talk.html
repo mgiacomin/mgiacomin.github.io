@@ -14,29 +14,63 @@
 
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
-        <img src=
-          {% if teaser contains "://" %}
-            "{{ teaser }}"
-          {% else %}
-            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
-          {% endif %}
+        <img
+          src="{% if teaser contains "://" %}{{ teaser }}{% else %}{{ teaser | prepend: "/images/" | prepend: base_path }}{% endif %}"
           alt="">
       </div>
     {% endif %}
-    <h2 class="archive__item-title" itemprop="headline">
+
+    <!-- ===== TALK TITLE (linked if post.link exists) ===== -->
+    <h3 class="archive__item-title" itemprop="headline" style="margin-bottom:6px;">
       {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        <a href="{{ post.link }}" target="_blank" rel="noopener" style="color:#2a4d9b;">
+          {{ title }}
+        </a>
       {% else %}
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+        <span style="color:#2a4d9b;">{{ title }}</span>
       {% endif %}
-    </h2>
-    {% if post.read_time %}
-      <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
+    </h3>
+
+    <!-- ===== DATE: Month + Year ===== -->
+    {% if post.date %}
+    <p style="margin:0; font-size:0.9em; color:#444;">
+      <i class="fa fa-calendar" style="margin-right:4px;"></i>
+      {{ post.date | date: "%B %Y" }}
+    </p>
     {% endif %}
-    {% if post.date %}<p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {{ post.date | date: '%B %d, %Y' }}</p>{% endif %}
-    {% if post.venue %}<p class="archive__item-excerpt" itemprop="description">{{post.type}}, {{ post.venue }},  {{post.location}} {% endif %}
-    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>{% endif %}
+
+    <!-- ===== TALK TITLE (post.talk) ===== -->
+    {% if post.talk %}
+    <p style="margin:0; font-size:0.9em; color:#444;">
+      <i class="fa fa-pencil" style="margin-right:4px;"></i>
+      {{ post.talk }}
+    </p>
+    {% endif %}
+
+    <!-- ===== TALK TYPE (highlight Invited) ===== -->
+    {% if post.type %}
+    <p style="margin:0; font-size:0.9em;">
+      {% if post.type == "Invited" %}
+        <span style="color:#b30000; font-weight:bold;">
+          ★ Invited Talk
+        </span>
+      {% else %}
+        <i class="fa fa-bullhorn" style="margin-right:4px; color:#666;"></i>
+        <span style="color:#666;">{{ post.type }}</span>
+      {% endif %}
+    </p>
+    {% endif %}
+
+    <!-- ===== LOCATION ===== -->
+    {% if post.location %}
+    <p style="margin:0; font-size:0.9em; color:#444;">
+      <i class="fa fa-map-marker" style="margin-right:4px;"></i>
+      {{ post.location }}
+    </p>
+    {% endif %}
+
   </article>
 </div>
