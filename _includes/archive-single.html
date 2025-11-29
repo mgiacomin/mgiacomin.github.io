@@ -27,38 +27,76 @@
       </div>
     {% endif %}
 
-    <!-- ====== TITLE DISPLAY ====== -->
+    <!-- ========================= -->
+    <!-- ====== TITLE DISPLAY ===== -->
+    <!-- ========================= -->
     <h2 class="archive__item-title" itemprop="headline">
       {% if post.collection == 'publications' and post.link %}
-        <!-- Publications: only link to the paper -->
-        <a href="{{ post.link }}" target="_blank" rel="noopener">{{ title }}</a>
+        <!-- Publications: only link to paper -->
+        <a href="{{ post.link }}" target="_blank" rel="noopener" style="color:#2a4d9b;">
+          {{ title }}
+        </a>
+
       {% elsif post.collection == 'teaching' %}
         <strong>{{ title }}</strong>
+
       {% elsif post.link %}
-        <!-- Other posts with external link: keep permalink icon -->
+        <!-- Standard external link + permalink -->
         <a href="{{ post.link }}">{{ title }}</a>
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">
           <i class="fa fa-link" aria-hidden="true" title="permalink"></i>
           <span class="sr-only">Permalink</span>
         </a>
+
       {% else %}
-        <!-- Default permalink behavior -->
+        <!-- Default permalink -->
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
       {% endif %}
     </h2>
 
-    <!-- ====== METADATA DISPLAY ====== -->
+    <!-- ============================= -->
+    <!-- ===== METADATA DISPLAY ====== -->
+    <!-- ============================= -->
+
     {% if post.collection == 'publications' %}
-      <p>
-        {{ post.authors }}<br>
-        <i>{{ post.venue }}</i> <strong>{{ post.volume }}</strong> ({{ post.date | default: "1900-01-01" | date: "%Y" }})
+
+      <!-- ===== AUTHORS ===== -->
+      {% if post.authors %}
+      <p style="margin:0 0 2px 0; color:#444;">
+        {{ post.authors }}
       </p>
+      {% endif %}
+
+      <!-- ===== VENUE ===== -->
+      {% if post.venue %}
+      <p style="margin:0; font-size:0.9em; color:#444;">
+        <i class="fa fa-book" style="margin-right:4px;"></i>
+        <i>{{ post.venue }}</i>
+        {% if post.volume %}
+           <strong>{{ post.volume }}</strong>
+        {% endif %}
+      </p>
+      {% endif %}
+
+      <!-- ===== YEAR ===== -->
+      {% if post.date %}
+      <p style="margin:0; font-size:0.9em; color:#444;">
+        <i class="fa fa-calendar" style="margin-right:4px;"></i>
+        {{ post.date | default: "1900-01-01" | date: "%Y" }}
+      </p>
+      {% endif %}
+
     {% elsif post.collection == 'teaching' %}
-      <p><i>{{ post.venue }}</i>, {{post.location}}<br>
-      {{ post.type }}<br>
-      {{ post.year }}<br>
-      {{ post.role }}</p>
+
+      <p>
+        <i>{{ post.venue }}</i>, {{post.location}}<br>
+        {{ post.type }}<br>
+        {{ post.year }}<br>
+        {{ post.role }}
+      </p>
+
     {% elsif post.date %}
+
       <p class="page__date">
         <strong>
           <i class="fa fa-fw fa-calendar" aria-hidden="true"></i>
@@ -68,11 +106,16 @@
           {{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}
         </time>
       </p>
+
     {% endif %}
 
-    <!-- ====== EXCERPT ====== -->
+    <!-- ========================= -->
+    <!-- ====== EXCERPT TEXT ===== -->
+    <!-- ========================= -->
+
     {% if post.excerpt and site.read_more != 'enabled' %}
       <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+
     {% elsif post.excerpt and site.read_more == 'enabled' %}
       <p class="archive__item-excerpt" itemprop="description">
         {{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}

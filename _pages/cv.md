@@ -50,7 +50,7 @@ Research experience
 Funding record
 ======
 **Enabling Research Project 2026—2027**\
-Principal Investigator of the EnR project "Developing reduced turbulence transport models for the tokamak scrape-off layer" funded by Horizon Europe. Project budget 610 000 €.
+Principal Investigator of the EUROfusion Enabling Research project "Developing reduced turbulence transport models for the tokamak scrape-off layer" funded by Horizon Europe. Project budget 610 000 €.
 
 
 Awards and prizes
