@@ -35,4 +35,4 @@ Turbulence is one of Nature's most fascinating phenomena, ubiquitous in our dail
 
 Turbulence in a fusion plasma transports particles and heat from the plasma core to the boundary region, effectively determining how good the plasma confinement is. Large turbulent transport results in poor plasma confinement and, therefore, low fusion performance. Can we predict turbulent transport in magnetic confinement fusion machines? The answer is yes, but it is not a simple task. It requires performing highly complex turbulence simulations that demand the computational power of the world's largest high-performance computing facilities. 
 
-Find out more on my research activity [here]()!
+Find out more on my research activity [here](/research.html)!
