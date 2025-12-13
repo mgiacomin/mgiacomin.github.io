@@ -29,7 +29,7 @@ One of the most significant international research collaborations in fusion is t
 
 ## Plasma Turbulence
 
-<img src='/images/500x300.png'>
+<img src='/images/Turbulence.png'>
 
 Turbulence is one of Nature's most fascinating phenomena, ubiquitous in our daily lives. From stirring your teacup to riding your bike to work, you constantly interact with turbulence. This complex phenomenon arises from nonlinear processes and is often accompanied by chaos, making its dynamics exceptionally challenging to understand. Consider the stock market as an example of turbulence in a different context. A single news article can trigger unpredictable effects, causing some investors to gain fortunes while others suffer significant losses. As a matter of fact, the risks and opportunities in the stock market are largely associated with chaos and unpredictability.
 
