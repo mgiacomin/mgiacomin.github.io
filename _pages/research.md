@@ -26,7 +26,7 @@ Three-dimensional simulations provide plenty of details but are terribly expensi
 
 <img src='/images/RM.png'>
 
-Developing accurate reduced transport models is essential. In fact, large uncertainties on the prediction of turbulent transport in the external plasma region translate into high costs of magnetic confinement fusion devices. The European Commission, through EURATOM-Horizon Europe, has funded a 600 k project on developing reduced transport models in the external plasma region. I am pleased to be the Principal Investigator of this project, which involves three European research institutes, *Consorzio RFX* (Italy), the *Dutch Institute for Fundamental Energy Research* (the Netherlands) and the *Swiss Plasma Center – EPFL* (Switzerland). 
+Developing accurate reduced transport models is essential. In fact, large uncertainties on the prediction of turbulent transport in the external plasma region translate into high costs of magnetic confinement fusion devices. The European Commission, through EURATOM-Horizon Europe, has funded a 600 k€ project on developing reduced transport models in the external plasma region. I am pleased to be the Principal Investigator of this project, which involves three European research institutes, *Consorzio RFX* (Italy), the *Dutch Institute for Fundamental Energy Research* (the Netherlands) and the *Swiss Plasma Center – EPFL* (Switzerland). 
 
 
 
