@@ -15,6 +15,11 @@ var addressPoints = [
     -0.5800364
   ],
   [
+    "Seminar on plasma turbulence at the Institute of Plasma Physics, Chinese Academy of Sciences (ASIPP)<br />Hefei, China",
+    31.8665676,
+    117.281428
+  ],
+  [
     "49th IOP Annual Plasma Physics Conference<br />Oxford, United Kingdom",
     51.7520131,
     -1.2578499
